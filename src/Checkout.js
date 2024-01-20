@@ -18,9 +18,10 @@ function Checkout() {
           <h2 className="checkout__title">Your shopping Basket</h2>
           <div className="check__items"></div>
           <div>
-            {basket.map((title) => {
+            {basket.map((title,i) => {
               return (
                 <CheckProduct
+                  key = {i}
                   id={title.id}
                   title={title.title}
                   price={title.price}
